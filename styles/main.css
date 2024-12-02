@@ -1,0 +1,717 @@
+/* Colors */
+/* Font */
+/* Animations */
+/* Sizes */
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1.5fr 3fr 1.5fr;
+  background-color: #000;
+  color: #fff;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  transition: width 0.3s ease;
+}
+@media (max-width: 930px) {
+  main {
+    width: 100%;
+    grid-template-columns: 1fr 3fr;
+  }
+}
+@media (max-width: 480px) {
+  main {
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+}
+
+.left-side {
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 480px) {
+  .left-side {
+    display: none !important;
+  }
+}
+.left-side .leftSide__home {
+  display: flex;
+  flex-direction: column;
+  background-color: #121212;
+  border-radius: 15px;
+  margin: 4px;
+}
+.left-side .leftSide__home .home__icon, .left-side .leftSide__home .home__searchIcon {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  padding-left: 10px;
+  font-size: 0.8rem;
+  color: #b3b3b3;
+  transition: all 0.3s ease;
+}
+.left-side .leftSide__home .home__icon p, .left-side .leftSide__home .home__searchIcon p {
+  display: inline;
+  cursor: pointer;
+}
+.left-side .leftSide__home .home__icon svg, .left-side .leftSide__home .home__icon .main .main__banner .main__nav .nav__right img, .main .main__banner .main__nav .nav__right .left-side .leftSide__home .home__icon img, .left-side .leftSide__home .home__searchIcon svg, .left-side .leftSide__home .home__searchIcon .main .main__banner .main__nav .nav__right img, .main .main__banner .main__nav .nav__right .left-side .leftSide__home .home__searchIcon img {
+  width: 15px;
+  cursor: pointer;
+}
+.left-side .leftSide__home .home__icon:hover, .left-side .leftSide__home .home__searchIcon:hover {
+  color: #fff;
+}
+.left-side .leftSide__library {
+  display: flex;
+  flex-direction: column;
+  background-color: #121212;
+  border-radius: 15px;
+  margin: 4px;
+  flex-grow: 1;
+}
+.left-side .leftSide__library .library__selectors {
+  display: flex;
+  font-size: 0.8rem;
+  color: #b3b3b3;
+  align-items: center;
+  padding-left: 10px;
+  justify-content: space-between;
+}
+.left-side .leftSide__library .library__selectors .selectors__left {
+  display: flex;
+  align-items: center;
+}
+.left-side .leftSide__library .library__selectors .selectors__left div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.3s ease;
+}
+.left-side .leftSide__library .library__selectors .selectors__left div:hover {
+  color: #fff;
+}
+.left-side .leftSide__library .library__selectors .selectors__right {
+  display: flex;
+  gap: 5px;
+  padding-right: 5px;
+}
+.left-side .leftSide__library .library__selectors i, .left-side .leftSide__library .library__selectors p {
+  display: inline;
+  cursor: pointer;
+}
+.left-side .leftSide__library .library__selectors svg, .left-side .leftSide__library .library__selectors .main .main__banner .main__nav .nav__right img, .main .main__banner .main__nav .nav__right .left-side .leftSide__library .library__selectors img {
+  width: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.left-side .leftSide__library .library__selectors svg:hover, .left-side .leftSide__library .library__selectors .main .main__banner .main__nav .nav__right img:hover, .main .main__banner .main__nav .nav__right .left-side .leftSide__library .library__selectors img:hover {
+  color: #fff;
+}
+.left-side .leftSide__library .library__nav {
+  display: flex;
+  flex-direction: column;
+}
+.left-side .leftSide__library .library__nav .nav__closeIcon {
+  display: flex;
+  align-items: center;
+  padding-left: 5px;
+  color: #b3b3b3;
+}
+.left-side .leftSide__library .library__nav .nav__closeIcon svg, .left-side .leftSide__library .library__nav .nav__closeIcon .main .main__banner .main__nav .nav__right img, .main .main__banner .main__nav .nav__right .left-side .leftSide__library .library__nav .nav__closeIcon img {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  padding: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.left-side .leftSide__library .library__nav .nav__closeIcon svg:hover, .left-side .leftSide__library .library__nav .nav__closeIcon .main .main__banner .main__nav .nav__right img:hover, .main .main__banner .main__nav .nav__right .left-side .leftSide__library .library__nav .nav__closeIcon img:hover {
+  background-color: #1f1f1f;
+}
+.left-side .leftSide__library .library__nav .nav__closeIcon p {
+  background-color: #fff;
+  padding: 5px;
+  border-radius: 20px;
+  color: #000;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: all 0.3s ease;
+}
+.left-side .leftSide__library .library__nav .nav__closeIcon p:hover {
+  scale: 1.03;
+}
+.left-side .leftSide__library .library__nav .nav__search {
+  display: flex;
+  padding-left: 10px;
+}
+.left-side .leftSide__library .library__nav .nav__search .home__searchIcon {
+  color: #b3b3b3;
+  padding: 0 5px 0 0;
+}
+.left-side .leftSide__library .library__nav .nav__search .home__searchIcon svg, .left-side .leftSide__library .library__nav .nav__search .home__searchIcon .main .main__banner .main__nav .nav__right img, .main .main__banner .main__nav .nav__right .left-side .leftSide__library .library__nav .nav__search .home__searchIcon img {
+  width: 15px;
+}
+.left-side .leftSide__library .library__nav .nav__search input {
+  background: none;
+  border: none;
+  outline: none;
+  color: #fff;
+}
+.left-side .leftSide__library .library__contents {
+  padding: 30px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.left-side .leftSide__library .library__contents .library__item {
+  display: flex;
+  color: #fff;
+  font-size: 0.8rem;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  border-radius: 90px;
+  cursor: pointer;
+}
+.left-side .leftSide__library .library__contents .library__item img {
+  width: 50px;
+  border-radius: 50px;
+}
+.left-side .leftSide__library .library__contents .library__item:hover {
+  background-color: rgba(31, 31, 31, 0.5411764706);
+  border-radius: 15px;
+}
+
+/* Colors */
+/* Font */
+/* Animations */
+/* Sizes */
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1.5fr 3fr 1.5fr;
+  background-color: #000;
+  color: #fff;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  transition: width 0.3s ease;
+}
+@media (max-width: 930px) {
+  main {
+    width: 100%;
+    grid-template-columns: 1fr 3fr;
+  }
+}
+@media (max-width: 480px) {
+  main {
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+}
+
+.right-side {
+  display: flex;
+  flex-direction: column;
+  background-color: #121212;
+  border-radius: 15px;
+  margin: 4px;
+}
+@media (max-width: 930px) {
+  .right-side {
+    display: none !important;
+  }
+}
+.right-side .right-side__picture {
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px;
+}
+.right-side .right-side__picture .picture__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.right-side .right-side__picture .picture__nav h3 {
+  font-size: clamp(0.8rem, 2vw, 1.2rem);
+}
+.right-side .right-side__picture .picture__nav svg, .right-side .right-side__picture .picture__nav .main .main__banner .main__nav .nav__right img, .main .main__banner .main__nav .nav__right .right-side .right-side__picture .picture__nav img {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  padding: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 17px;
+  height: 17px;
+}
+.right-side .right-side__picture .picture__nav svg:hover, .right-side .right-side__picture .picture__nav .main .main__banner .main__nav .nav__right img:hover, .main .main__banner .main__nav .nav__right .right-side .right-side__picture .picture__nav img:hover {
+  background-color: #1f1f1f;
+}
+.right-side img {
+  border-radius: 5px;
+  margin: 0 5px;
+  max-width: 100%;
+}
+.right-side .picture__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.right-side .picture__info .pictureInfo__text {
+  padding-left: 10px;
+}
+.right-side .picture__info .pictureInfo__text > h1, .right-side .picture__info .pictureInfo__text p {
+  margin: 0;
+  padding: 0;
+}
+.right-side .picture__info .pictureInfo__text p {
+  font-size: 0.85rem;
+  font-weight: 300;
+}
+.right-side .picture__info .picture__interaction {
+  display: flex;
+  align-items: center;
+  padding-right: 10px;
+}
+.right-side .picture__info .picture__interaction .item__like {
+  background: none;
+  border: none;
+  outline: none;
+  color: #fff;
+  color: #b3b3b3;
+}
+.right-side .picture__info .picture__interaction .item__like svg, .right-side .picture__info .picture__interaction .item__like .main .main__banner .main__nav .nav__right img, .main .main__banner .main__nav .nav__right .right-side .picture__info .picture__interaction .item__like img {
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.right-side .picture__info .picture__interaction .item__like svg:hover, .right-side .picture__info .picture__interaction .item__like .main .main__banner .main__nav .nav__right img:hover, .main .main__banner .main__nav .nav__right .right-side .picture__info .picture__interaction .item__like img:hover {
+  fill: #1ed760;
+  color: #1ed760;
+}
+.right-side .picture__info .picture__interaction .item__like svg, .right-side .picture__info .picture__interaction .item__like .main .main__banner .main__nav .nav__right img, .main .main__banner .main__nav .nav__right .right-side .picture__info .picture__interaction .item__like img {
+  width: 20px;
+  height: 20px;
+}
+.right-side .picture__info .content__threeDots {
+  align-self: baseline;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.right-side .picture__info .content__threeDots:hover {
+  scale: 1.03;
+}
+.right-side .right-side__artistInfo {
+  display: flex;
+  flex-direction: column;
+  background-color: #121212;
+  border-radius: 15px;
+  margin: 4px;
+  background-color: #1f1f1f;
+  margin: 10px;
+  transition: all 0.3s ease;
+  flex-grow: 1;
+  font-size: 0.8rem;
+}
+.right-side .right-side__artistInfo .artistInfo__img {
+  padding-bottom: 6.25rem;
+  background-image: url("https://img.freepik.com/foto-gratis/dos-hombres-cafe_23-2147775893.jpg?t=st=1731795369~exp=1731798969~hmac=f41e715f4ef08047e814706ecec14e25c9170e0eb716fecc1c03582200a9950b&w=1380");
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px 15px 0 0;
+}
+.right-side .right-side__artistInfo .artistInfo__img > p {
+  margin: 0;
+  padding: 10px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #fff;
+}
+.right-side .right-side__artistInfo:hover {
+  scale: 1.005;
+}
+.right-side .right-side__artistInfo .artistInfo__oyentes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.right-side .right-side__artistInfo .artistInfo__oyentes h3, .right-side .right-side__artistInfo .artistInfo__oyentes p {
+  padding: 10px 0 0 10px;
+  margin: 0;
+}
+.right-side .right-side__artistInfo .artistInfo__oyentes .artistInfo__mensual {
+  font-size: 0.65rem;
+  grid-area: 1/-4;
+  padding-top: 2px;
+}
+.right-side .right-side__artistInfo .artistInfo__oyentes .content__following {
+  padding: 5px;
+  border: 1px solid #b3b3b3;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  color: #fff;
+  cursor: pointer;
+  grid-area: -2/-1;
+  font-size: 0.5rem;
+  margin: 3px;
+  width: 60px;
+  font-weight: 600;
+}
+.right-side .right-side__artistInfo .artistInfo__oyentes .content__following:hover {
+  scale: 1.03;
+}
+.right-side .right-side__artistInfo p {
+  font-size: 0.7rem;
+  font-weight: 300;
+  padding-left: 10px;
+  color: #b3b3b3;
+}
+
+/* Colors */
+/* Font */
+/* Animations */
+/* Sizes */
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1.5fr 3fr 1.5fr;
+  background-color: #000;
+  color: #fff;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  transition: width 0.3s ease;
+}
+@media (max-width: 930px) {
+  main {
+    width: 100%;
+    grid-template-columns: 1fr 3fr;
+  }
+}
+@media (max-width: 480px) {
+  main {
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: #000;
+  color: #fff;
+  height: 5rem;
+  align-items: center;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+}
+footer .footer__song {
+  display: flex;
+  gap: 5px;
+  padding: 10px;
+  align-items: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+@media (max-width: 380px) {
+  footer .footer__song {
+    display: none !important;
+  }
+}
+footer .footer__song img {
+  height: 3rem;
+  border-radius: 5px;
+}
+footer .footer__song .footerSong__content {
+  margin: 0;
+}
+footer .footer__song .footerSong__content h1,
+footer .footer__song .footerSong__content p {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 0;
+}
+footer .footer__song .footerSong__content p {
+  font-size: 0.75rem;
+  font-weight: 300;
+}
+footer .item__like {
+  background: none;
+  border: none;
+  outline: none;
+  color: #fff;
+  color: #b3b3b3;
+}
+footer .item__like svg, footer .item__like .main .main__banner .main__nav .nav__right img, .main .main__banner .main__nav .nav__right footer .item__like img {
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+footer .item__like svg:hover, footer .item__like .main .main__banner .main__nav .nav__right img:hover, .main .main__banner .main__nav .nav__right footer .item__like img:hover {
+  fill: #1ed760;
+  color: #1ed760;
+}
+footer .item__like svg, footer .item__like .main .main__banner .main__nav .nav__right img, .main .main__banner .main__nav .nav__right footer .item__like img {
+  width: 18px;
+  height: 18px;
+}
+footer .footer__player {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  width: 22rem;
+  justify-content: center;
+}
+@media (max-width: 380px) {
+  footer .footer__player {
+    width: 100%;
+  }
+}
+footer .footer__player button {
+  cursor: pointer;
+}
+footer .footer__player button:hover {
+  scale: 1.03;
+}
+footer .footer__player .player__backwards {
+  transform: scale(-1, 1);
+}
+footer .footer__player button {
+  background: none;
+  border: none;
+  outline: none;
+  color: #fff;
+}
+footer .footer__player button svg, footer .footer__player button .main .main__banner .main__nav .nav__right img, .main .main__banner .main__nav .nav__right footer .footer__player button img {
+  width: 17px;
+  height: 17px;
+  color: #b3b3b3;
+}
+footer .footer__player .content__btn svg, footer .footer__player .content__btn .main .main__banner .main__nav .nav__right img, .main .main__banner .main__nav .nav__right footer .footer__player .content__btn img {
+  width: 25px;
+  height: 25px;
+  color: #000;
+  fill: #000;
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 5px;
+}
+footer .footer__controls {
+  display: flex;
+  gap: 10px;
+  color: #b3b3b3;
+  padding-right: 10px;
+  width: 150px;
+  justify-content: right;
+}
+@media (max-width: 480px) {
+  footer .footer__controls {
+    display: none !important;
+  }
+}
+footer .footer__controls .controls__volume,
+footer .footer__controls .controls__maximize {
+  cursor: pointer;
+}
+footer .footer__controls .controls__volume:hover,
+footer .footer__controls .controls__maximize:hover {
+  scale: 1.03;
+}
+footer .footer__controls svg, footer .footer__controls .main .main__banner .main__nav .nav__right img, .main .main__banner .main__nav .nav__right footer .footer__controls img {
+  width: 17px;
+  height: 17px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  margin: 4px;
+}
+.main .main__banner {
+  display: flex;
+  flex-direction: column;
+  background-image: url("https://img.freepik.com/foto-gratis/mediano-disparo-joven-dj-fiesta-techno_23-2150639037.jpg?t=st=1731873962~exp=1731877562~hmac=48f515e8e46be80de0d3d055d1569f6a178704f5577cae303bf0a48a5cd0e3d6&w=1800");
+  background-color: #3d2310;
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px 15px 0 0;
+}
+.main .main__banner .main__nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5px;
+}
+.main .main__banner .main__nav .nav__left, .main .main__banner .main__nav .nav__right {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  padding-top: 5px;
+}
+.main .main__banner .main__nav .nav__left svg, .main .main__banner .main__nav .nav__right svg, .main .main__banner .main__nav .nav__right img {
+  background-color: rgba(31, 31, 31, 0.5411764706);
+  padding: 2px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.main .main__banner .main__nav .nav__left svg:hover, .main .main__banner .main__nav .nav__right svg:hover, .main .main__banner .main__nav .nav__right img:hover {
+  background-color: #1f1f1f;
+}
+.main .main__banner .main__nav .nav__left .home__icon, .main .main__banner .main__nav .nav__right .home__icon, .main .main__banner .main__nav .nav__left .left-side .leftSide__home .home__searchIcon, .main .main__banner .main__nav .nav__right .left-side .leftSide__home .home__searchIcon, .left-side .leftSide__home .main .main__banner .main__nav .nav__left .home__searchIcon, .left-side .leftSide__home .main .main__banner .main__nav .nav__right .home__searchIcon {
+  display: none;
+}
+@media (max-width: 480px) {
+  .main .main__banner .main__nav .nav__left .home__icon, .main .main__banner .main__nav .nav__right .home__icon, .main .main__banner .main__nav .nav__left .left-side .leftSide__home .home__searchIcon, .main .main__banner .main__nav .nav__right .left-side .leftSide__home .home__searchIcon, .left-side .leftSide__home .main .main__banner .main__nav .nav__left .home__searchIcon, .left-side .leftSide__home .main .main__banner .main__nav .nav__right .home__searchIcon {
+    display: contents;
+    padding: 5px;
+  }
+  .main .main__banner .main__nav .nav__left .home__icon svg, .main .main__banner .main__nav .nav__left .home__icon .nav__right img, .main .main__banner .main__nav .nav__right .home__icon svg, .main .main__banner .main__nav .nav__right .home__icon img, .main .main__banner .main__nav .nav__left .left-side .leftSide__home .home__searchIcon svg, .main .main__banner .main__nav .nav__left .left-side .leftSide__home .home__searchIcon .nav__right img, .main .main__banner .main__nav .nav__right .left-side .leftSide__home .home__searchIcon svg, .main .main__banner .main__nav .nav__right .left-side .leftSide__home .home__searchIcon img, .left-side .leftSide__home .main .main__banner .main__nav .nav__left .home__searchIcon svg, .left-side .leftSide__home .main .main__banner .main__nav .nav__left .home__searchIcon .nav__right img, .left-side .leftSide__home .main .main__banner .main__nav .nav__right .home__searchIcon svg, .left-side .leftSide__home .main .main__banner .main__nav .nav__right .home__searchIcon img {
+    width: 19px;
+    height: 19px;
+    padding: 5px;
+  }
+}
+.main .main__banner .main__nav .nav__right svg, .main .main__banner .main__nav .nav__right img {
+  width: 19px;
+  height: 19px;
+  padding: 5px;
+}
+.main .main__banner .main__info {
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+}
+.main .main__banner .main__info .banner__verified {
+  padding-top: 5.3rem;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.main .main__banner .main__info .banner__verified img {
+  width: 20px;
+}
+.main .main__banner .main__info .banner__title {
+  font-size: 5.5rem;
+  margin: 0;
+}
+.main .main__songs {
+  background: linear-gradient(#eb6708, #121212 40%);
+  border-radius: 0 0 15px 15px;
+}
+.main .main__songs .main__content {
+  display: flex;
+  gap: 15px;
+  padding: 5px;
+  align-items: center;
+  margin: 0 1rem;
+}
+.main .main__songs .main__content .content__btn {
+  background-color: #1ed760;
+  border: none;
+  outline: none;
+  color: #000;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.main .main__songs .main__content .content__btn svg, .main .main__songs .main__content .content__btn .main__banner .main__nav .nav__right img, .main .main__banner .main__nav .nav__right .main__songs .main__content .content__btn img {
+  fill: #000;
+  width: 27px;
+  height: 27px;
+  align-self: center;
+}
+.main .main__songs .main__content .content__btn:hover {
+  scale: 1.03;
+}
+.main .main__songs .main__content .content__following {
+  padding: 5px;
+  border: 1px solid #b3b3b3;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  color: #fff;
+  cursor: pointer;
+}
+.main .main__songs .main__content .content__following:hover {
+  scale: 1.03;
+}
+.main .main__songs .main__content .content__threeDots {
+  align-self: baseline;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.main .main__songs .main__content .content__threeDots:hover {
+  scale: 1.03;
+}
+.main .main__songs h2 {
+  font-size: 2rem;
+  margin: 0 1.1rem;
+}
+.main .main__songs .main__items {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+}
+.main .main__songs .main__items .main__item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15px;
+  margin: 0 5px;
+  align-items: center;
+  font-size: 0.8rem;
+  transition: all 0.3s ease;
+}
+.main .main__songs .main__items .main__item div {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  cursor: pointer;
+}
+.main .main__songs .main__items .main__item div img {
+  width: 2.5rem;
+  border-radius: 5px;
+}
+.main .main__songs .main__items .main__item p {
+  color: #b3b3b3;
+  font-weight: 300;
+}
+.main .main__songs .main__items .main__item p:nth-child(3) {
+  color: #fff;
+  font-weight: 600;
+}
+.main .main__songs .main__items .main__item .item__like {
+  background: none;
+  border: none;
+  outline: none;
+  color: #fff;
+  color: #b3b3b3;
+}
+.main .main__songs .main__items .main__item .item__like svg, .main .main__songs .main__items .main__item .item__like .main__banner .main__nav .nav__right img, .main .main__banner .main__nav .nav__right .main__songs .main__items .main__item .item__like img {
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.main .main__songs .main__items .main__item .item__like svg:hover, .main .main__songs .main__items .main__item .item__like .main__banner .main__nav .nav__right img:hover, .main .main__banner .main__nav .nav__right .main__songs .main__items .main__item .item__like img:hover {
+  fill: #1ed760;
+  color: #1ed760;
+}
+.main .main__songs .main__items .main__item:hover {
+  background-color: rgba(31, 31, 31, 0.5411764706);
+  border-radius: 10px;
+}
+@media (max-width: 380px) {
+  .main .main__songs .main__items .main__item .item__listeners,
+  .main .main__songs .main__items .main__item .item__like {
+    display: none !important;
+  }
+}/*# sourceMappingURL=main.css.map */

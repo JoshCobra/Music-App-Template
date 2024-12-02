@@ -1,0 +1,133 @@
+@import "./base";
+@import "./components";
+
+.right-side {
+    @include hideOnBreakpoint(930px);
+    @include asideFlex();
+
+    .right-side__picture {
+        display: flex;
+        flex-direction: column;
+        padding: 0 10px;
+
+        .picture__nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            h3 {
+                font-size: clamp(0.8rem, 2vw, 1.2rem);
+            }            
+
+            svg {
+                @include x-button();
+                @include svg-icon(17px);
+            }
+        }
+    }
+
+    img {
+        border-radius: 5px;
+        margin: 0 5px;
+        max-width: 100%;
+    }
+
+    .picture__info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .pictureInfo__text {
+            padding-left: 10px;
+            
+            > h1, p {
+                margin: 0;
+                padding: 0;
+            }
+
+            p {
+                font-size: 0.85rem;
+                font-weight: 300;
+            }
+        }
+
+        .picture__interaction {
+            display: flex;
+            align-items: center;
+            padding-right: 10px;
+
+            .item__like {
+                @include like-btn();
+
+                svg {
+                    @include svg-icon(20px);
+                }
+            }
+        }
+
+        .content__threeDots {
+            @include three-dots();
+        }
+    }
+
+    .right-side__artistInfo {
+        @include asideFlex();
+        background-color: $background-highlight;
+        margin: 10px;
+        transition: $transition;
+        flex-grow: 1;
+        font-size: 0.8rem;
+        
+        .artistInfo__img {
+            padding-bottom: 6.25rem;
+            background-image: url("https://img.freepik.com/foto-gratis/dos-hombres-cafe_23-2147775893.jpg?t=st=1731795369~exp=1731798969~hmac=f41e715f4ef08047e814706ecec14e25c9170e0eb716fecc1c03582200a9950b&w=1380");
+            background-size: cover;
+            background-position: center;
+            border-radius: 15px 15px 0 0;
+
+            > p {
+                margin: 0;
+                padding: 10px;
+                font-size: $text-size;
+                font-weight: 600;
+                color: $text;
+            }
+        }
+
+        &:hover {
+            scale: 1.005;
+        }
+
+        .artistInfo__oyentes {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            
+            h3, p {
+                padding: 10px 0 0 10px;
+                margin: 0;
+            }
+
+            .artistInfo__mensual {
+                font-size: 0.65rem;
+                grid-area: 1 / -4;
+                padding-top: 2px;
+            }
+
+            .content__following {
+                @include following();
+                grid-area: -2 / -1;
+                font-size: 0.5rem;
+                margin: 3px;
+                width: 60px;
+                font-weight: 600;
+            }
+        }
+
+        p {
+            font-size: 0.7rem;
+            font-weight: 300;
+            padding-left: 10px;
+            color: $sub-text;
+        }
+    }
+}

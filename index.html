@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <title>Spotify</title>
+</head>
+<body>
+    <main>
+        <aside class="left-side">
+            <!-- Section library Home, Buscar -->
+            <section class="leftSide__home">
+                <div class="home__icon">
+                    <i data-feather="home"></i>
+                    <p>Inicio</p>
+                </div>
+                <div class="home__searchIcon">
+                    <i data-feather="search"></i>
+                    <p>Buscar</p>
+                </div>
+            </section>
+
+            <!-- Section library left -->
+            <section class="leftSide__library">
+                <!-- library top section -->
+                <div class="library__selectors">
+                    <div class="selectors__left">
+                        <div class="library__icon">
+                            <i data-feather="book-open"></i>
+                            <p>Tu Biblioteca</p>
+                        </div>
+                    </div>
+                    <div class="selectors__right">
+                        <div class="library__addIcon">
+                            <i data-feather="plus"></i>
+                        </div>
+                        <div class="library__rightArrowIcon">
+                            <i data-feather="arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+                <nav class="library__nav">
+                    <div class="nav__closeIcon">
+                        <i data-feather="x"></i>
+                        <p>Canales</p>
+                    </div>
+                    <div class="nav__search">
+                        <div class="home__searchIcon">
+                            <i data-feather="search"></i>
+                        </div>
+                        <input type="search" placeholder="Filtrar por">
+                    </div>
+                </nav>
+            <!-- section library content-->
+            <section class="library__contents">
+                <!-- library items -->
+                <div class="library__item">
+                    <img src="https://img.freepik.com/foto-gratis/muesli-bayas-cafe-bandeja_23-2147678791.jpg?t=st=1731788967~exp=1731792567~hmac=f23926b9222f17a99fd5cac5b6189861ed0dde2ec80cd6fa3330f15d0880114c&w=826" alt="desayuno-img">
+                    <span>Desayuno</span>
+                </div>
+                <div class="library__item">
+                    <img src="https://img.freepik.com/fotos-premium/plato-comida-variedad-ingredientes-incluido-arroz-aguacate-aguacate_675826-130.jpg?w=826" alt="comida-img">
+                    <span>Comida</span>
+                </div>
+                <div class="library__item">
+                    <img src="https://img.freepik.com/foto-gratis/vista-lateral-postre-placa-te-nueces-mermelada-frutas-sobre-fondo-blanco-madera_176474-3859.jpg?t=st=1731789086~exp=1731792686~hmac=7d3b9a366dfca0c62a879e8659273844d7f1e39950721ada2c150be180aa6af2&w=826" alt="sobremesa-img">
+                    <span>Sobremesa</span>
+                </div>
+                <div class="library__item">
+                    <img src="https://img.freepik.com/foto-gratis/vista-lateral-mujer-come-ensalada-copa-vino-mesa-arboles-fuga-luz-solar-fondo_176474-3901.jpg?t=st=1731789122~exp=1731792722~hmac=4bf449582d0723e47b418e91abca8fcc027c74bf5431abfe5be97b2c09428f4f&w=826" alt="cena-img">
+                    <span>Cena</span>
+                </div>
+                <div class="library__item">
+                    <img src="https://img.freepik.com/vector-gratis/ilustracion-vector-luna-llena-cerca-alrededor-estrellas_1284-42218.jpg?t=st=1731789289~exp=1731792889~hmac=51d58ae9d7497be32d1c73e955c29710b67b44268458fb055c890ad3228c432e&w=826" alt="noche-img">
+                    <span>Noche</span>
+                </div>
+                <div class="library__item">
+                    <img src="https://img.freepik.com/foto-gratis/grupo-gente-bailando-discoteca_23-2147717095.jpg?t=st=1731789347~exp=1731792947~hmac=3cd095ce99e0c23affddcaf90d7ffd9eca885d5810df5c5cb742646f99cedb61&w=826" alt="party-img">
+                    <span>Party</span>
+                </div>
+            </section>
+            </section>
+        </aside>
+
+        <section class="main">
+            <section class="main__banner">
+                <nav class="main__nav">
+                    <div class="nav__left">
+                        <div class="home__icon">
+                            <i data-feather="home"></i>
+                        </div>
+                        <div class="nav__chevLeft">
+                            <i data-feather="chevron-left"></i>
+                        </div>
+                        <div class="nav__chevRight">
+                            <i data-feather="chevron-right"></i>
+                        </div>
+                    </div>
+                    <div class="nav__right">
+                        <div class="nav__notifications">
+                            <i data-feather="bell"></i>
+                        </div>
+                        <div class="nav__user">
+                            <img src="https://img.freepik.com/foto-gratis/personaje-estilo-dibujos-animados-3d_23-2151034122.jpg?t=st=1731794803~exp=1731798403~hmac=aa5176a89cf3b4044511c59a3f5ec1aa0f12240feccc28307d8be2c6cad690fd&w=826" alt="user__img">
+                        </div>
+                    </div>
+                </nav>
+                <!-- Section Main Banner -->
+                <article class="main__info">
+                    <div class="banner__verified">
+                        <img src="img/verified.png" alt="verified-img">
+                        <small>Artista Verificado</small>
+                    </div>
+                    <div class="banner__info">
+                        <h1 class="banner__title">PlayIn</h1>
+                        <p class="banner__oyentes">2.435.946 oyentes mensuales</p>
+                    </div>
+                </article>
+            </section>
+            <!-- Section Main Content -->
+            <section class="main__songs">
+                <article class="main__content">
+                    <button class="content__btn"><i data-feather="play"></i></button>
+                    <p class="content__following">Siguiendo</p>
+                    <p class="content__threeDots">...</p>
+                </article>
+                <h2>Populares</h2>
+                <!-- Section Songs -->
+                <article class="main__items">
+                    <div class="main__item">
+                        <div class="item__songInfo">
+                            <p class="item__number">1</p>
+                            <img class="item__img" src="https://i.scdn.co/image/ab67616d0000485182ea2e9e1858aa012c57cd45" alt="song-img">
+                            <p class="song__name"> Canción 1</p>
+                        </div>
+                        <p class="item__listeners">9.879</p>
+                        <button class="item__like"><i data-feather="heart"></i></button>
+                        <p class="item__duration">3:05</p>
+                    </div>
+                    <div class="main__item">
+                        <div class="item__songInfo">
+                            <p class="item__number">2</p>
+                            <img class="item__img" src="https://i.scdn.co/image/ab67616d00004851f8c8297efc6022534f1357e1" alt="song-img">
+                            <p class="song__name"> Canción 2</p>
+                        </div>
+                        <p class="item__listeners">3.457</p>
+                        <button class="item__like"><i data-feather="heart"></i></button>
+                        <p class="item__duration">2:58</p>
+                    </div>
+                    <div class="main__item">
+                        <div class="item__songInfo">
+                            <p class="item__number">3</p>
+                            <img class="item__img" src="https://i.scdn.co/image/ab67616d0000485171d62ea7ea8a5be92d3c1f62" alt="song-img">
+                            <p class="song__name"> Canción 3</p>
+                        </div>
+                        <p class="item__listeners">6.578</p>
+                        <button class="item__like"><i data-feather="heart"></i></button>
+                        <p class="item__duration">4:32</p>
+                    </div>
+                    <div class="main__item">
+                        <div class="item__songInfo">
+                            <p class="item__number">4</p>
+                            <img class="item__img" src="https://i.scdn.co/image/ab67616d000048511dac3694b3289cd903cb3acf" alt="song-img">
+                            <p class="song__name"> Canción 4</p>
+                        </div>
+                        <p class="item__listeners">4.546</p>
+                        <button class="item__like"><i data-feather="heart"></i></button>
+                        <p class="item__duration">5:02</p>
+                    </div>
+                    <div class="main__item">
+                        <div class="item__songInfo">
+                            <p class="item__number">5</p>
+                            <img class="item__img" src="https://i.scdn.co/image/ab67616d00004851f02c451189a709b9a952aaec" alt="song-img">
+                            <p class="song__name"> Canción 5</p>
+                        </div>
+                        <p class="item__listeners">2.435</p>
+                        <button class="item__like"><i data-feather="heart"></i></button>
+                        <p class="item__duration">2:47</p>
+                    </div>
+                </article>
+            </section>
+        </section>
+        <!-- Section Right Side -->        
+        <aside class="right-side">
+            <!-- Right Side Top -->
+            <section class="right-side__picture">
+                <div class="picture__nav">
+                    <h3 class="picture-nav__title">PlayIn</h3>
+                    <div class="nav__closeIcon">
+                        <i data-feather="x"></i>
+                    </div>
+                </div>
+                <img src="https://i.scdn.co/image/ab67616d00004851f02c451189a709b9a952aaec" alt="picture-img">
+                <div class="picture__info">
+                    <div class="pictureInfo__text">
+                        <h1 class="picture__name">Canción 5</h1>
+                        <p class="picture__artist">PlayIn</p>
+                    </div>
+                    <div class="picture__interaction">
+                        <div class="picture__heartIcon">
+                            <button class="item__like"><i data-feather="heart"></i></button>
+                        </div>
+                        <p class="content__threeDots">...</p>
+                    </div>
+                </div>
+                <!-- Right Side Bottom -->
+                <section class="right-side__artistInfo">
+                    <div class="artistInfo__img">
+                        <p class="artistInfo__title">Información sobre el artista</p>
+                    </div>
+                    <div class="artistInfo__oyentes">
+                        <h3 class="artistInfo__name">PlayIn</h3>
+                        <p class="artistInfo__mensual">2.435.946 oyentes mensuales</p>
+                        <p class="content__following">Dejar de Seguir</p>
+                    </div>
+                    <p class="artistInfo__txt">Señal distribuida con un player controlado y sincronizado desde la nube, programado mensualmente por DJs altamente reconocidos...</p>
+                </section>
+            </section>
+        </aside>
+    </main>
+
+    <footer>
+        <!-- Footer song -->
+        <article class="footer__song">
+            <img class="item__img" src="https://i.scdn.co/image/ab67616d00004851f02c451189a709b9a952aaec" alt="song-img">
+            <div class="footerSong__content">
+                <h1 class="picture__name">Canción 5</h1>
+                <p class="picture__artist">PlayIn</p>
+            </div>
+            <button class="item__like"><i data-feather="heart"></i></button>
+        </article>
+        <!-- Footer player -->
+        <section class="footer__player">
+            <button class="player__backwards"><i data-feather="skip-forward"></i></button>
+            <button class="content__btn"><i data-feather="play"></i></button>
+            <button class="player__forward"><i data-feather="skip-forward"></i></button>
+            <button class="player__repeat"><i data-feather="repeat"></i></button>
+        </section>
+        <!-- Footer right controls -->
+        <article class="footer__controls">
+            <div class="controls__volume">
+                <i data-feather="volume-2"></i>
+            </div>
+            <div class="controls__maximize">
+                <i data-feather="maximize-2"></i>
+            </div>
+        </article>
+    </footer>
+
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>

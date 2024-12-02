@@ -1,0 +1,184 @@
+@import "./leftSide";
+@import "./rightSide";
+@import "./footer";
+
+
+.main {
+    display: flex;
+    flex-direction: column;
+    margin: 4px;
+
+    .main__banner {
+        display: flex;
+        flex-direction: column;
+        background-image: url("https://img.freepik.com/foto-gratis/mediano-disparo-joven-dj-fiesta-techno_23-2150639037.jpg?t=st=1731873962~exp=1731877562~hmac=48f515e8e46be80de0d3d055d1569f6a178704f5577cae303bf0a48a5cd0e3d6&w=1800");
+        background-color: mix-colors($orange, $background-base, 20%);
+        background-size: cover;
+        background-position: center;
+        border-radius: 15px 15px 0 0;
+
+        .main__nav {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 5px;
+
+            .nav__left {
+                display: flex;
+                gap: 5px;
+                align-items: center;
+                padding-top: 5px;
+
+                svg {
+                    background-color: $transparent;
+                    padding: 2px;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    transition: $transition;
+
+                    &:hover {
+                        background-color: $background-highlight;
+                    }
+                }
+
+                .home__icon {
+                    display: none;
+                    @include navHomeIcon(480px);
+                }
+            }
+
+            .nav__right {
+                @extend .nav__left;
+
+                svg {
+                    width: 19px;
+                    height: 19px;
+                    padding: 5px;
+                }
+
+                img {
+                    @extend svg;
+                }
+            }
+        }
+
+        .main__info {
+            display: flex;
+            padding: 20px;
+            flex-direction: column;
+
+            .banner__verified {
+                padding-top: 5.3rem;
+                display: flex;
+                gap: 5px;
+                align-items: center;
+
+                img {
+                    width: 20px;
+                }
+            }
+
+            .banner__title {
+                font-size: 5.5rem;
+                margin: 0;
+            }
+        }
+    }
+
+    .main__songs {
+        background: linear-gradient($orange, $background-base 40%);
+        border-radius: 0 0 15px 15px;
+
+        .main__content { 
+            display: flex;
+            gap: 15px;
+            padding: 5px;
+            align-items: center;
+            margin: 0 1rem;
+
+            .content__btn {
+                @include greenInput();
+                border-radius: 50%;
+                width: 55px;
+                height: 55px;
+                cursor: pointer;
+                transition: $transition;
+
+                svg {
+                    fill: $background-color;
+                    width: 27px;
+                    height: 27px;
+                    align-self: center;
+                }
+
+                &:hover {
+                    scale: 1.03;
+                }
+            }
+
+            .content__following {
+                @include following();
+            }
+
+            .content__threeDots {
+                @include three-dots();
+            }
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin: 0 1.1rem;
+        }
+
+        .main__items {
+            display: flex;
+            flex-direction: column;
+            padding: 20px 0;
+
+            .main__item {
+                display: flex;
+                justify-content: space-between;
+                padding: 10px 15px;
+                margin: 0 5px;
+                align-items: center;
+                font-size: $text-size;
+                transition: $transition;
+
+                div {
+                    display: flex;
+                    gap: 10px;
+                    align-items: center;
+                    cursor: pointer;
+
+                    img {
+                        width: 2.5rem;
+                        border-radius: 5px;
+                    }
+                }
+
+                p {
+                    color: $sub-text;
+                    font-weight: 300;
+
+                    &:nth-child(3) {
+                        color: $text;
+                        font-weight: 600;
+                    }
+                }
+
+                .item__like {
+                    @include like-btn();
+                }
+
+                &:hover {
+                    background-color: $transparent;
+                    border-radius: 10px;
+                }
+
+                .item__listeners,
+                .item__like {
+                    @include hideOnBreakpoint(380px);
+                }
+            }
+        }
+    }
+}

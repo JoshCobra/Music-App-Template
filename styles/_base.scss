@@ -1,0 +1,141 @@
+/* Colors */
+$background-color: #000;
+$background-base: #121212;
+$background-highlight: #1f1f1f;
+$green: #1ed760;
+$orange: #eb6708;
+$transparent: #1f1f1f8a;
+$text: #fff;
+$sub-text: #b3b3b3;
+
+/* Font */
+$font-family: "Inter", Arial, Helvetica, sans-serif;
+$text-size: 0.8rem;
+
+/* Animations */
+$transition: all 0.3s ease;
+
+/* Sizes */
+$svg: 15px;
+
+@mixin asideFlex($direction: column) {
+    display: flex;
+    flex-direction: $direction;
+    background-color: $background-base;
+    border-radius: 15px;
+    margin: 4px;
+}
+
+@mixin cleanInput {
+    background: none;
+    border: none;
+    outline: none;
+    color: $text;
+}
+
+@mixin greenInput {
+    background-color: $green;
+    border: none;
+    outline: none;
+    color: $background-color;
+}
+
+@mixin x-button {
+    width: $svg;
+    height: $svg;
+    border-radius: 50%;
+    padding: 6px;
+    cursor: pointer;
+    transition: $transition;
+
+    &:hover {
+        background-color: $background-highlight;
+    }
+}
+
+@mixin like-btn {
+    @include cleanInput();
+    color: $sub-text;
+
+    svg {
+        width: $svg;
+        height: $svg;
+        cursor: pointer;
+        transition: $transition;
+
+        &:hover {
+            fill: $green;
+            color: $green;
+        }
+    }
+}
+
+@mixin three-dots {
+    align-self: baseline;
+    font-size: 1.5rem;
+    cursor: pointer;
+
+    &:hover {
+        scale: 1.03;
+    }
+}
+
+@mixin following {
+    padding: 5px;
+    border: 1px solid $sub-text;
+    border-radius: 20px;
+    font-size: $text-size;
+    color: $text;
+    cursor: pointer;
+
+    &:hover {
+        scale: 1.03;
+    }
+}
+
+@mixin svg-icon($svg) {
+    width: $svg;
+    height: $svg;
+}
+
+@mixin hideOnBreakpoint($max-width) {
+    @media (max-width: $max-width) {
+        display: none !important;
+    }
+}
+
+@mixin extendOnBreakpoint($max-width) {
+    @media (max-width: $max-width) {
+        width: 100%; // Ocupa todo el espacio disponible
+        grid-template-columns: 1fr 3fr;
+    }
+}
+
+@mixin fullGrid($max-width) {
+    @media (max-width: $max-width) {
+        width: 100%; // Ocupa todo el espacio disponible
+        grid-template-columns: 1fr;
+    }
+}
+
+@mixin footerPlayer($max-width) {
+    @media (max-width: $max-width) {
+        width: 100%;
+    }
+}
+
+@mixin navHomeIcon($max-width) {
+    @media (max-width: $max-width) {
+        display: contents;
+        padding: 5px;
+
+        svg {
+            @include svg-icon(19px);
+            padding: 5px;
+        }
+    }
+}
+
+@function mix-colors($color1, $color2, $weight: 50%) {
+    @return mix($color1, $color2, $weight);
+}
